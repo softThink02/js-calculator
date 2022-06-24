@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstNumber;
+let operator;
+let secondNumber;
+let answer;
+let powerMode = "on";
+
+const startCalculator = () => {
+alert(
+  "Please note that this calculator supports only addition, subtraction, multiplication and division."
+);
+firstNumber = prompt("Input first number here ");
+operator = prompt("Input operator here ");
+secondNumber = prompt("Input second number here ");
+}
+
+const repetitor = () => {
+    let repeater = prompt(
+  "Welcome Back, would you like to continue? Type y or n to continue or stop..."
+);
+if(repeater === "y") {
+    welcomeBack()
+}
+if (repeater === "n") {
+    alert("Thanks for using this calculator... BYE!!!");
+}
+}
+
+const welcomeBack = () => {
+firstNumber = prompt("Input first number here ");
+operator = prompt("Input operator here ");
+secondNumber = prompt("Input second number here ");
+}
+
+startCalculator();
+
+const addition = () => {
+  if (operator === "+") {
+    answer = Number(firstNumber) + Number(secondNumber);
+  alert(`Your answer is ${answer}`);
+  }
+}
+
+const subtraction = () => {
+  if (operator === "-") {
+    answer = Number(firstNumber) - Number(secondNumber);
+  alert(`Your answer is ${answer}`);
+  }
+}
+
+const multiplication = () => {
+  if (operator === "*") {
+    answer = Number(firstNumber) * Number(secondNumber);
+  alert(`Your answer is ${answer}`);
+  }
+}
+
+const division = () => {
+  if (operator === "/") {
+    answer = Number(firstNumber) / Number(secondNumber);
+  alert(`Your answer is ${answer}`);
+  }
+}
+
+if (operator) {
+    if(operator === "+") {
+      addition();
+      repetitor();
+      welcomeBack()
+    }
+    if(operator === "-") {
+    subtraction();
+      repetitor();
+    welcomeBack()
+    }
+    if(operator === "*") {
+    multiplication();
+      repetitor();
+    welcomeBack()
+    }
+    if(operator === "/") {
+    division();
+      repetitor();
+    welcomeBack()
+    }
+}
+    </script>
+</body>
+</html>
